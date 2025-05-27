@@ -1,0 +1,413 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--color2);
+}
+
+:root{
+    --color1:#000000;
+    --color2:#ffffff;
+    --color3:#03055e;
+    --color4:#778da9;
+    --color5:#161a1d;
+}
+
+
+body{
+    position: relative;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: var(--color5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+header{
+    position: fixed;
+    background-color: rgba(13, 9, 4, 0.526);
+    top: 0;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    
+  
+    
+   
+
+}
+.logo{
+   position: absolute;
+   left: 10px;
+   height: 80%;
+   width: 150px;
+   display: flex;
+   align-items: center;
+}
+.logo_img{
+    height: 30px;
+    width:30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+
+}
+
+.loga_name{
+    height: 100%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: bolder;
+}
+
+.navbar{
+    position: absolute;
+    left: 160px;
+    height: 80%;
+    width: 150px;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
+}
+
+.navbar a{
+    text-decoration: none;
+}
+
+.search_container{
+    position: absolute;
+    right: 100px;
+    height: inherit;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.search_container_input{
+    width: 80%;
+    height: 30px;
+    border-radius: 10px 0px 0px 10px;
+    padding: 5px;
+    color:black;
+
+}
+.search_container_btn{
+    width: 20%;
+    height: 30px;
+    border-radius: 0px 10px 10px 0px;
+
+}
+
+
+main {
+    min-height: 100vh;
+    height: 100vh;
+    overflow-y: scroll;
+    display: grid;
+    grid-template-rows: 3fr 1fr 1fr;
+}
+main::-webkit-scrollbar{
+    width: 0px;
+}
+.randomMovie{
+    background-color: var(--color5);
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background-size:cover;
+    background-repeat: no-repeat;
+    min-width: 100%;
+    height: 90vh;    
+    background-position: center;
+  
+
+    
+
+
+}
+
+.randomMovie_poster{
+    position: relative;
+    width: 400px;
+    height: 500px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    filter: brightness(1.2)
+
+
+
+}
+
+.randomMovie_logo{
+    position: absolute;
+    width: 300px;
+    padding: 20px;
+    font-size: 1rem ;
+
+}
+.main_item{
+    display: grid;
+    grid-template-rows: 10% 90%;
+    max-width: 100vw;
+
+    
+}
+
+
+.trending_title{
+    background-color: var(--color5);
+    position: relative;
+    padding-left: 5%;
+    
+
+
+}
+.trending_moive{
+    display: flex;
+    padding-left: 5%;
+    align-items: center ;
+    min-width: 100vw;
+    height: inherit;
+    overflow-x: scroll;
+}
+
+.trending_moive::-webkit-scrollbar{
+    width: 0px;
+}
+
+
+.list_title{
+    background-color: var(--color5);
+    position: relative;
+    padding-left: 5%;
+
+}
+.list_moive{
+    display: flex;
+    padding-left: 5%;
+    align-items: center ;
+    min-width: 100vw;
+    height: inherit;
+    overflow-x: scroll;
+
+}
+
+.list_moive::-webkit-scrollbar{
+    width: 0px;
+}
+
+.poster_img{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 180px;
+    min-width: 130px;
+    border-radius: 2px;
+    cursor: pointer;
+    border: none;
+    filter: brightness(1.2);
+    margin-right: 10px;
+
+
+}
+.poster_code{
+    display: none;
+}
+
+
+
+#movie_popup{
+    position: fixed;
+    bottom: 0%;
+    background-color: black;
+    display: grid;
+    width: 700px;
+    height:auto;
+    z-index: 1;
+    border-radius: 10px;
+}
+#movie_popup_backdrop{
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    border-radius: 10px 10px 0px 0px;
+
+}
+#popup_logo_container{    
+    position: absolute;
+    color: #03055e;
+    bottom: 10%;
+    left: 10px;
+    border: 1px white solid;
+    width: 50%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#popup_logo_container img{
+    width: 100%;
+    height: 100%;
+}
+
+
+#movie_popup_poster_and_info_box{
+    background-color: black;
+    width: inherit;
+    height: 100px; 
+    display: flex;
+    border: 1px white solid;
+    
+
+}
+
+
+
+#movie_popup_info{
+    background-color:  black;
+    width: 70%;
+    min-height: inherit;
+    border: 1px rgb(123, 25, 25) solid;
+    padding: 10px;
+    font-size: 1em;
+    overflow-y: scroll;
+
+}
+#movie_popup_info::-webkit-scrollbar{
+    width: 0px;
+}
+
+#movie_popup_info2{
+    background-color:  black;
+    width: 30%;
+    min-height: inherit;
+    border: 1px rgb(41, 25, 123) solid;
+    padding: 10px;
+    font-size: 1em;
+}
+#movie_popup_trailer{
+    background-color: black;
+    width: inherit;
+    height: 300px;
+    border-radius: 00px 00px 10px 10px;
+    border: 1px white solid;
+
+
+}
+#movie_popup_close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(139, 190, 190);
+    width: 50px;
+    height: 50px;
+
+}
+
+#addToListbtn{
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    background-color: rgb(139, 190, 190);
+    width: 50px;
+    height: 50px;
+
+}
+
+.search_container_display{
+    position: absolute;
+    color: #03055e;
+    bottom: 0;
+    top:10%;
+    left: 10px;
+   
+    min-width: 100vw;
+    max-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+    
+}
+.movieBox_kids{
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 300px;
+    min-width: 200px;
+    border-radius: 2px;
+    cursor: pointer;
+    border: none;
+    filter: brightness(1.2);
+    margin: 10px;
+    
+}
+
+
+@media screen and (max-width: 800px) {
+    .search_container{
+        width: 50%;
+        right: 0;
+    }
+    
+}
+@media screen and (max-width: 600px) {
+    .search_container{
+        width: 100px;
+        right: 0;
+    }
+    .search_container_input{
+       position: absolute;
+       display: block;
+       width: 100px;
+       top:20%;
+       right: 80px;
+       border-radius: 10px;
+       
+    
+    }
+    .search_container_btn{
+        width: 100%;
+        height: 30px;
+        border-radius: 10px;
+    
+    }
+
+    .navbar{
+        position: absolute;
+        left: 160px;
+        height: 80%;
+        width: 150px;
+    }
+    
+    .navbar ul  {
+        position: absolute;
+        display: grid;
+        grid-template-rows: 15px 15px;
+        right: 50px;
+        top: 20%;
+
+      
+
+      
+    }
+    
+}
+
+
