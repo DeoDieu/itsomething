@@ -254,12 +254,13 @@ function createPopUp(){
         console.warn("thelogo_img is undefined or not found.");
     }
 
-
     const movie_popup_close = document.createElement("button")
     movie_popup_close.id = "movie_popup_close"
+    movie_popup_close.innerHTML = "X"
 
     addToListbtn = document.createElement("button")
     addToListbtn.id = "addToListbtn"
+    addToListbtn.innerHTML = "+"
 
    
 
