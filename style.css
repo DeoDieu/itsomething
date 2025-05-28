@@ -418,6 +418,7 @@ main::-webkit-scrollbar{
         z-index: 1;
         border-radius: 10px;
         top:10px;
+        justify-content: center;
     }
     
     
