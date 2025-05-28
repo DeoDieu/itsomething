@@ -407,6 +407,19 @@ main::-webkit-scrollbar{
 
       
     }
+
+     #movie_popup{
+        position: fixed;
+        bottom: 0%;
+        background-color: black;
+        display: grid;
+        max-width: 90%;
+        height:auto;
+        z-index: 1;
+        border-radius: 10px;
+        top:10px;
+    }
+    
     
 }
 
